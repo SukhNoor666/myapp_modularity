@@ -14,6 +14,23 @@ class MyApp extends StatefulWidget {
 class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(home: Scaffold(body: Text("This is a test")));
+    return MaterialApp(
+      home: Scaffold(
+        appBar: AppBar(
+          actions: [
+            Expanded(
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [FlutterLogo(), Text('Flutter App')],
+              ),
+            ),
+          ],
+        ),
+        drawer: Drawer(child: null),
+        body: Center(
+          child: Text("This is a test", style: TextStyle(fontSize: 22)),
+        ),
+      ),
+    );
   }
 }
