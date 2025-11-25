@@ -17,11 +17,17 @@ class _MyAppState extends State<MyApp> {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
+          backgroundColor: Colors.blue,
           actions: [
             Expanded(
               child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: [FlutterLogo(), Text('Flutter App')],
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                children: [
+                  SizedBox(width: 20),
+                  FlutterLogo(),
+                  SizedBox(width: 180),
+                  Icon(Icons.notification_add),
+                ],
               ),
             ),
           ],
