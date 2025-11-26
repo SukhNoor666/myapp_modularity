@@ -14,7 +14,12 @@ class _Home_PageState extends State<Home_Page> {
     return Scaffold(
       body: Container(
         decoration: BoxDecoration(color: Colors.red),
-        child: ListView.builder(itemCount: image_card.length),
+        child: ListView.builder(
+          itemCount: image_card.length,
+          itemBuilder: (context, index) {
+            return image_card[index];
+          },
+        ),
       ),
     );
   }
